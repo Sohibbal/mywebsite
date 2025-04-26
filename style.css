@@ -7,7 +7,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 1px;
 }
-#hero p, footer .container a{
+#hero p, footer .container a, #Contact p, .btn{
   color: #00965a;
 }
 footer .container a:hover{
