@@ -9,11 +9,9 @@ function typeWriter() {
   } else {
     nameEl.innerHTML = text.substring(0, i++);
   }
-
   // Kecepatan dikurangi, tambah random biar smooth
   let baseDelay = isDeleting ? 120 : 200;
   let delay = baseDelay + Math.random() * 50;
-
   if (!isDeleting && i === text.length + 1) {
     delay = 1500; // Diam sejenak setelah selesai ngetik
     isDeleting = true;
@@ -21,16 +19,12 @@ function typeWriter() {
     delay = 800; // Diam sejenak setelah selesai hapus
     isDeleting = false;
   }
-
   setTimeout(typeWriter, delay);
 }
-
 window.onload = typeWriter;
-
 
 // Scroll Animation for Popups
 const popups = document.querySelectorAll('.popup');
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -38,7 +32,6 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.1 });
-
 popups.forEach(popup => {
   observer.observe(popup);
 });
